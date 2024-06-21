@@ -18,7 +18,7 @@ function addTask(title) {
     const task = { isDone: false }
 
     // やることのタイトルを設定(このままだと、すべてのタイトルがHello Worldになってしまう！)
-    task.title = "Hello World"
+    task.title = title
 
     // 以降は無視して良い
     tasks.push(task);
@@ -45,11 +45,17 @@ function onUpdateIsDone(task) {
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = task.isDone;
     task.isDone = currentValue;
+
+
+    
+
+
     if (currentvalue==true){
         task.isDone=false;
     }else if(currentvalue==false){
         task.isDone=true;
     }
+
     return task;
 }
 
@@ -74,6 +80,10 @@ function onTaskTitleClicked(task) {
     const currentValue = task.isDone;
     task.isDone = currentValue;
 
+
+   
+
+
     if(currentvalue==true){
         task.isDone=false;
     }else if(currentvalue==false){
@@ -81,5 +91,6 @@ function onTaskTitleClicked(task) {
     }
 
     
+
     return task;
 }
