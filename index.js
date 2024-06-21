@@ -45,7 +45,11 @@ function onUpdateIsDone(task) {
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = task.isDone;
     task.isDone = currentValue;
-
+    if (currentvalue==true){
+        task.isDone=false;
+    }else if(currentvalue==false){
+        task.isDone=true;
+    }
     return task;
 }
 
@@ -69,6 +73,6 @@ function onTaskTitleClicked(task) {
     // 達成状態を更新(このままだと、現在の達成状態で更新されてしまう！)
     const currentValue = task.isDone;
     task.isDone = currentValue;
-
+    
     return task;
 }
