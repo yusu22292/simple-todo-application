@@ -46,7 +46,15 @@ function onUpdateIsDone(task) {
     const currentValue = task.isDone;
     task.isDone = currentValue;
 
+
     
+
+
+    if (currentvalue==true){
+        task.isDone=false;
+    }else if(currentvalue==false){
+        task.isDone=true;
+    }
 
     return task;
 }
@@ -72,7 +80,17 @@ function onTaskTitleClicked(task) {
     const currentValue = task.isDone;
     task.isDone = currentValue;
 
+
    
+
+
+    if(currentvalue==true){
+        task.isDone=false;
+    }else if(currentvalue==false){
+        task.isDone=true;
+    }
+
+    
 
     return task;
 }
