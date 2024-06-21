@@ -84,9 +84,9 @@ function onTaskTitleClicked(task) {
    
 
 
-    if(currentvalue==true){
+    if(currentValue==true){
         task.isDone=false;
-    }else if(currentvalue==false){
+    }else if(currentValue==false){
         task.isDone=true;
     }
 
